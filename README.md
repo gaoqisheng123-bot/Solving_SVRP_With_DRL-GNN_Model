@@ -36,7 +36,8 @@ pip install torch numpy matplotlib tqdm
 
 ## 🏋️ 3. Training the Model
 
-**Basic Training**//
+**Basic Training**
+
 Train a model for a 10-node problem for 100 epochs:
 
 ```bash
@@ -70,18 +71,21 @@ You can evaluate a trained model using different inference strategies. Use the -
 Examples are shown with the existing model:
 
 **Strategy A: Greedy Inference**
+
 This is the fastest method. It always selects the node with the highest probability output by the policy.
 ```bash
 python main.py --test_only --load_model ./checkpoints_final_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference greedy --test_size 50 --save_dir results/vrp_final_n10_v5_greedy --cuda
 ```
 
 **Strategy B: Beam Search**
+
 This maintains the top k most probable partial solutions at every step. It offers a balance between exploration and exploitation but is computationally expensive.
 ```bash
 python main.py --test_only --load_model ./checkpoints_final_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 5 --test_size 100 --save_dir results/vrp_final_n10_v5_beam5 --cuda
 ```
 
 **Strategy C: Random Sampling**
+
 This samples N different solutions from the policy's probability distribution and selects the one with the lowest cost. It is slower and computationally heavier than Greedy and Beam but usually finds better solutions with increasing N.
 ```bash
 python main.py --test_only --load_model ./checkpoints_final_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_final_n10_v5_random_eval --cuda
@@ -97,6 +101,7 @@ At the evaluation stage, the script generates visualizations of the routes:
 1. Route Visualization: results/vrp_final_n10_v5_{strategy}/route_visualization_{strategy}.png (A plot of the chosen strategy.)
 
 ## 🧩 6. Customization
+
 You can adjust the neural network architecture during training, some examples would be:
 1. --embedding_dim: Size of the node embeddings (default: 128).
 2. --gat_layers: Depth of the Graph Attention Network encoder.
@@ -104,6 +109,7 @@ You can adjust the neural network architecture during training, some examples wo
 
 
 ## ⚠️ Troubleshooting
+
 RuntimeError: CUDA out of memory
 Reduce the --batch_size or --embedding_dim
 

@@ -5,6 +5,8 @@ This project implements a Deep Reinforcement Learning (DRL) solution for the Sto
 ## 📂 1. Project Structure
 
 To ensure the Python imports work correctly, your directory structure **must** look like this.
+```text
+.
 ├── config.py
 ├── main.py
 ├── env/

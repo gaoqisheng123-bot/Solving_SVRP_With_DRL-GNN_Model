@@ -1,4 +1,4 @@
-# Solving Stochastic Vehicle Routing Problem (SVRP) using A Deep Reinforcement Learning and Graph Neural Network Model (DRL-GNN)
+# Solving Stochastic Vehicle Routing Problem using A Deep Reinforcement Learning and Graph Neural Network Model
 
 This project implements a Deep Reinforcement Learning (DRL) solution for the Stochastic Vehicle Routing Problem using PyTorch. It utilizes a **Graph Attention Network (GAT)** encoder and a **REINFORCE**-based policy gradient method to train an agent to route vehicles under uncertain demand and weather conditions.
 

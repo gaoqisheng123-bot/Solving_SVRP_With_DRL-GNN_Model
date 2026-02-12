@@ -1,0 +1,76 @@
+2026-01-08 15:29:25,133 [INFO] Running with arguments: Namespace(num_nodes=10, num_vehicles=1, capacity=50.0, fixed_customers=True, embedding_dim=256, gat_heads=8, gat_layers=4, epochs=100, batch_size=32, lr=0.0001, baseline_lr=0.001, entropy_weight=0.01, max_steps=30, inference='greedy', num_samples=16, beam_width=3, test_size=50, cuda=True, seed=42, save_dir='results/vrp_final_n10_v5_greedy', load_model='./checkpoints_final_10_v5/model_final', test_only=True, log_interval=10, save_interval=20, deterministic_env=False)
+2026-01-08 15:29:25,133 [INFO] Using device: cuda
+2026-01-08 15:29:27,034 [INFO] Loaded SHARED validation dataset from ./data\validation_dataset_n10.pkl
+2026-01-08 15:29:27,044 [INFO] Loaded model weights from ./checkpoints_final_10_v5/model_final
+2026-01-08 15:29:27,045 [INFO] Running final evaluation (greedy)...
+2026-01-08 15:29:27,045 [INFO] Starting Final evaluation with greedy strategy.
+2026-01-08 15:29:27,231 [INFO] Instance 0: Cost = -488.310
+2026-01-08 15:29:27,231 [INFO]   Vehicle 1 Raw Route: [5, 3, 8, 1, 0, 4, 7, 6, 0, 9, 2, 0]
+2026-01-08 15:29:27,232 [INFO]   Instance 0: COMPLETE.
+2026-01-08 15:29:27,272 [INFO] Instance 1: Cost = -487.609
+2026-01-08 15:29:27,272 [INFO]   Vehicle 1 Raw Route: [8, 2, 1, 6, 3, 0, 5, 4, 7, 9, 0]
+2026-01-08 15:29:27,273 [INFO]   Instance 1: COMPLETE.
+2026-01-08 15:29:27,314 [INFO] Instance 2: Cost = -491.459
+2026-01-08 15:29:27,314 [INFO]   Vehicle 1 Raw Route: [4, 9, 7, 8, 5, 0, 1, 2, 3, 0, 6, 0]
+2026-01-08 15:29:27,315 [INFO]   Instance 2: COMPLETE.
+2026-01-08 15:29:29,248 [INFO] Final evaluation completed.
+2026-01-08 15:29:29,248 [INFO]   Mean Cost: -483.517
+2026-01-08 15:29:29,248 [INFO]   Total Time: 2.20s
+2026-01-08 15:29:29,248 [INFO]   Avg Time/Instance: 0.0441s
+2026-02-12 20:26:54,969 [INFO] Running with arguments: Namespace(num_nodes=10, num_vehicles=1, capacity=50.0, fixed_customers=True, embedding_dim=256, gat_heads=8, gat_layers=4, epochs=100, batch_size=32, lr=0.0001, baseline_lr=0.001, entropy_weight=0.01, max_steps=30, inference='greedy', num_samples=16, beam_width=3, test_size=50, cuda=True, seed=42, save_dir='results/vrp_final_n10_v5_greedy', load_model='./checkpoints_final_10_v5/model_final', test_only=True, log_interval=10, save_interval=20, deterministic_env=False)
+2026-02-12 20:26:54,970 [INFO] Using device: cuda
+2026-02-12 20:26:59,991 [INFO] Loaded SHARED validation dataset from ./data\validation_dataset_n10.pkl
+2026-02-12 20:27:00,013 [INFO] Loaded model weights from ./checkpoints_final_10_v5/model_final
+2026-02-12 20:27:00,015 [INFO] Running final evaluation (greedy)...
+2026-02-12 20:27:00,015 [INFO] Starting Final evaluation with greedy strategy.
+2026-02-12 20:27:00,554 [INFO] Instance 0: Cost = -488.310
+2026-02-12 20:27:00,554 [INFO]   Vehicle 1 Raw Route: [5, 3, 8, 1, 0, 4, 7, 6, 0, 9, 2, 0]
+2026-02-12 20:27:00,555 [INFO]   Instance 0: COMPLETE.
+2026-02-12 20:27:00,600 [INFO] Instance 1: Cost = -487.609
+2026-02-12 20:27:00,601 [INFO]   Vehicle 1 Raw Route: [8, 2, 1, 6, 3, 0, 5, 4, 7, 9, 0]
+2026-02-12 20:27:00,601 [INFO]   Instance 1: COMPLETE.
+2026-02-12 20:27:00,647 [INFO] Instance 2: Cost = -491.459
+2026-02-12 20:27:00,647 [INFO]   Vehicle 1 Raw Route: [4, 9, 7, 8, 5, 0, 1, 2, 3, 0, 6, 0]
+2026-02-12 20:27:00,647 [INFO]   Instance 2: COMPLETE.
+2026-02-12 20:27:02,642 [INFO] Final evaluation completed.
+2026-02-12 20:27:02,642 [INFO]   Mean Cost: -483.517
+2026-02-12 20:27:02,642 [INFO]   Total Time: 2.63s
+2026-02-12 20:27:02,643 [INFO]   Avg Time/Instance: 0.0525s
+2026-02-12 20:27:12,858 [INFO] Running with arguments: Namespace(num_nodes=10, num_vehicles=1, capacity=50.0, fixed_customers=True, embedding_dim=256, gat_heads=8, gat_layers=4, epochs=100, batch_size=32, lr=0.0001, baseline_lr=0.001, entropy_weight=0.01, max_steps=30, inference='greedy', num_samples=16, beam_width=3, test_size=50, cuda=True, seed=42, save_dir='results/vrp_final_n10_v5_greedy', load_model='./checkpoints_final_10_v5/model_final', test_only=True, log_interval=10, save_interval=20, deterministic_env=False)
+2026-02-12 20:27:12,858 [INFO] Using device: cuda
+2026-02-12 20:27:14,681 [INFO] Loaded SHARED validation dataset from ./data\validation_dataset_n10.pkl
+2026-02-12 20:27:14,691 [INFO] Loaded model weights from ./checkpoints_final_10_v5/model_final
+2026-02-12 20:27:14,692 [INFO] Running final evaluation (greedy)...
+2026-02-12 20:27:14,692 [INFO] Starting Final evaluation with greedy strategy.
+2026-02-12 20:27:14,865 [INFO] Instance 0: Cost = -488.310
+2026-02-12 20:27:14,865 [INFO]   Vehicle 1 Raw Route: [5, 3, 8, 1, 0, 4, 7, 6, 0, 9, 2, 0]
+2026-02-12 20:27:14,866 [INFO]   Instance 0: COMPLETE.
+2026-02-12 20:27:14,906 [INFO] Instance 1: Cost = -487.609
+2026-02-12 20:27:14,906 [INFO]   Vehicle 1 Raw Route: [8, 2, 1, 6, 3, 0, 5, 4, 7, 9, 0]
+2026-02-12 20:27:14,906 [INFO]   Instance 1: COMPLETE.
+2026-02-12 20:27:14,949 [INFO] Instance 2: Cost = -491.459
+2026-02-12 20:27:14,949 [INFO]   Vehicle 1 Raw Route: [4, 9, 7, 8, 5, 0, 1, 2, 3, 0, 6, 0]
+2026-02-12 20:27:14,950 [INFO]   Instance 2: COMPLETE.
+2026-02-12 20:27:16,816 [INFO] Final evaluation completed.
+2026-02-12 20:27:16,816 [INFO]   Mean Cost: -483.517
+2026-02-12 20:27:16,816 [INFO]   Total Time: 2.12s
+2026-02-12 20:27:16,816 [INFO]   Avg Time/Instance: 0.0425s
+2026-02-12 20:27:48,837 [INFO] Running with arguments: Namespace(num_nodes=10, num_vehicles=1, capacity=50.0, fixed_customers=True, embedding_dim=256, gat_heads=8, gat_layers=4, epochs=100, batch_size=32, lr=0.0001, baseline_lr=0.001, entropy_weight=0.01, max_steps=30, inference='greedy', num_samples=16, beam_width=3, test_size=50, cuda=True, seed=42, save_dir='results/vrp_final_n10_v5_greedy', load_model='./checkpoints_final_10_v5/model_final', test_only=True, log_interval=10, save_interval=20, deterministic_env=False)
+2026-02-12 20:27:48,837 [INFO] Using device: cuda
+2026-02-12 20:27:50,577 [INFO] Loaded SHARED validation dataset from ./data\validation_dataset_n10.pkl
+2026-02-12 20:27:50,584 [INFO] Loaded model weights from ./checkpoints_final_10_v5/model_final
+2026-02-12 20:27:50,585 [INFO] Running final evaluation (greedy)...
+2026-02-12 20:27:50,585 [INFO] Starting Final evaluation with greedy strategy.
+2026-02-12 20:27:50,769 [INFO] Instance 0: Cost = -488.310
+2026-02-12 20:27:50,769 [INFO]   Vehicle 1 Raw Route: [5, 3, 8, 1, 0, 4, 7, 6, 0, 9, 2, 0]
+2026-02-12 20:27:50,769 [INFO]   Instance 0: COMPLETE.
+2026-02-12 20:27:50,810 [INFO] Instance 1: Cost = -487.609
+2026-02-12 20:27:50,810 [INFO]   Vehicle 1 Raw Route: [8, 2, 1, 6, 3, 0, 5, 4, 7, 9, 0]
+2026-02-12 20:27:50,810 [INFO]   Instance 1: COMPLETE.
+2026-02-12 20:27:50,854 [INFO] Instance 2: Cost = -491.459
+2026-02-12 20:27:50,855 [INFO]   Vehicle 1 Raw Route: [4, 9, 7, 8, 5, 0, 1, 2, 3, 0, 6, 0]
+2026-02-12 20:27:50,855 [INFO]   Instance 2: COMPLETE.
+2026-02-12 20:27:52,730 [INFO] Final evaluation completed.
+2026-02-12 20:27:52,731 [INFO]   Mean Cost: -483.517
+2026-02-12 20:27:52,731 [INFO]   Total Time: 2.14s
+2026-02-12 20:27:52,731 [INFO]   Avg Time/Instance: 0.0429s

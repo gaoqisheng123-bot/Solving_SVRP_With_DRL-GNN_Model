@@ -1,0 +1,140 @@
+python main.py --epochs 500 --entropy_weight 0.1 --lr 1e-4 --num_nodes 5
+python main.py --num_nodes 5 --epochs 200 --save_dir ./checkpoints_n5_v1
+python main.py --num_nodes 10 --epochs 1000 --batch_size 128 --save_dir ./checkpoints_n10_v1
+python main.py --num_nodes 20 --epochs 2000 --batch_size 64 --load_model ./checkpoints_n10_v1/model_final --save_dir ./checkpoints_n20_v1
+python main.py --num_nodes 10 --epochs 2000 --batch_size 128 --embedding_dim 256 --gat_layers 4 --save_dir ./checkpoints_pro_10 --cuda
+python main.py --num_nodes 20 --epochs 2000 --batch_size 64 --embedding_dim 256 --gat_layers 4 --load_model ./checkpoints_pro_10/model_final --save_dir ./checkpoints_pro_20 --cuda
+python main.py --num_nodes 10 --epochs 5000 --batch_size 256 --lr 1e-4 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --entropy_weight 0.01 --save_dir ./checkpoints_ultra_10 --cuda
+python main.py --num_nodes 10 --epochs 10000 --batch_size 256 --lr 5e-5 --embedding_dim 256 --gat_layers 4 --gat_heads 16 --entropy_weight 0.05 --save_dir ./checkpoints_ultra_10_v2 --cuda
+python main.py --num_nodes 10 --epochs 5000 --batch_size 256 --lr 5e-5 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --entropy_weight 0.01 --save_dir ./checkpoints_ultra_10_v3 --cuda
+python main.py --num_nodes 10 --epochs 5000 --batch_size 256 --lr 5e-5 --embedding_dim 512 --gat_layers 4 --gat_heads 8 --entropy_weight 0.01 --save_dir ./checkpoints_ultra_10_v4 --cuda
+python main.py --num_nodes 10 --epochs 5000 --batch_size 512 --lr 1e-4 --baseline_lr 2e-4 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --entropy_weight 0.01 --save_dir ./checkpoints_ultra_10_v5 --cuda
+python main.py --num_nodes 10 --epochs 5000 --batch_size 512 --lr 5e-5 --baseline_lr 2e-4 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --entropy_weight 0.01 --save_dir ./checkpoints_ultra_10_v6 --cuda
+python main.py --num_nodes 10 --epochs 5000 --batch_size 512 --lr 1e-4 --baseline_lr 5e-4 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --entropy_weight 0.01 --save_dir ./checkpoints_ultra_10_v7 --cuda
+python main.py --num_nodes 20 --epochs 10000 --batch_size 128 --lr 1e-4 --baseline_lr 2e-4 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --load_model ./checkpoints_ultra_10_v5/model_final --save_dir ./checkpoints_ultra_20 --cuda
+python main.py --num_nodes 20 --epochs 20000 --batch_size 128 --lr 1e-4 --baseline_lr 2e-4 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --load_model ./checkpoints_ultra_10_v5/model_final --save_dir ./checkpoints_ultra_20_v2 --cuda
+
+python main.py --num_nodes 10 --epochs 5000 --batch_size 1024 --lr 1e-4 --baseline_lr 5e-4 --embedding_dim 256 --gat_layers 3 --gat_heads 4 --entropy_weight 0.05 --save_dir ./checkpoints_final_10 --cuda
+python main.py --num_nodes 20 --epochs 20000 --batch_size 512 --lr 5e-5 --baseline_lr 2e-4 --embedding_dim 256 --gat_layers 3 --gat_heads 4 --entropy_weight 0.05 --load_model ./checkpoints_final_10/model_final --save_dir ./checkpoints_final_20 --cuda
+
+
+
+
+15
+python main.py --num_nodes 20 --epochs 10000 --batch_size 128 --lr 1e-4 --baseline_lr 2e-4 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --load_model ./checkpoints_ultra_10_v5/model_final --save_dir ./checkpoints_ultra_15 --cuda
+
+
+
+python main.py --num_nodes 10 --epochs 5000 --batch_size 1024 --lr 1e-4 --baseline_lr 2e-4 --embedding_dim 256 --gat_layers 3 --gat_heads 4 --entropy_weight 0.05 --save_dir ./checkpoints_final_10 --cuda
+python main.py --num_nodes 10 --epochs 5000 --batch_size 512 --lr 1e-4 --baseline_lr 2e-4 --embedding_dim 256 --gat_layers 4 --gat_heads 4 --entropy_weight 0.05 --save_dir ./checkpoints_final_10_v2 --cuda 
+python main.py --num_nodes 10 --epochs 5000 --batch_size 512 --lr 1e-4 --baseline_lr 2e-4 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --entropy_weight 0.05 --save_dir ./checkpoints_final_10_v3 --cuda 
+python main.py --num_nodes 10 --epochs 5000 --batch_size 512 --lr 1e-4 --baseline_lr 2e-4 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --entropy_weight 0.05 --save_dir ./checkpoints_final_10_v4 --cuda --deterministic_env
+
+python main.py --test_only --load_model ./checkpoints_final_10_v2/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 4 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_final_n10_v2_random_eval_deter --cuda --deterministic_env
+python main.py --test_only --load_model ./checkpoints_final_10_v2/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 4 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_final_n10_v2_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_final_10_v3/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_final_n10_v3_random_eval --cuda
+2053.53s
+python main.py --test_only --load_model ./checkpoints_final_10_v3/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 5 --test_size 100 --save_dir results/vrp_final_n10_v3_beam5 --cuda
+58.97s
+python main.py --test_only --load_model ./checkpoints_final_10_v3/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_final_n10_v3_greedy --cuda
+2.84s
+python main.py --test_only --load_model ./checkpoints_final_10_v4/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_final_n10_v4_random_eval_deter --cuda --deterministic_env
+3203.62s
+python main.py --test_only --load_model ./checkpoints_final_10_v4/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 5 --test_size 100 --save_dir results/vrp_final_n10_v4_beam5 --cuda
+
+python main.py --test_only --load_model ./checkpoints_final_10_v4/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_final_n10_v4_greedy --cuda
+
+
+
+python main.py --num_nodes 10 --epochs 5000 --batch_size 512 --lr 1e-4 --baseline_lr 2e-4 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --entropy_weight 0.05 --save_dir ./checkpoints_final_10_v5 --cuda 
+python main.py --test_only --load_model ./checkpoints_final_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_final_n10_v5_random_eval --cuda
+2186.57
+python main.py --test_only --load_model ./checkpoints_final_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference greedy --test_size 50 --save_dir results/vrp_final_n10_v5_greedy --cuda
+2.2s
+python main.py --test_only --load_model ./checkpoints_final_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 5 --test_size 100 --save_dir results/vrp_final_n10_v5_beam5 --cuda
+63.89
+
+python main.py --test_only --load_model ./checkpoints_final_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 5 --test_size 100 --save_dir results/vrp_final_n10_v5_beam5_ins1 --cuda
+
+python main.py --test_only --load_model ./checkpoints_final_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_final_n10_v5_random_eval_ins3 --cuda
+
+
+
+python main.py --num_nodes 10 --epochs 1000 --batch_size 128 --embedding_dim 256 --gat_layers 4 --save_dir ./checkpoints_strong_10
+python main.py --num_nodes 20 --epochs 2000 --batch_size 64 --embedding_dim 256 --gat_layers 4 --load_model ./checkpoints_strong_10/model_final --save_dir ./checkpoints_strong_20
+
+rm checkpoints/*
+python main.py --test --inference greedy --load_model checkpoints/model_final
+python main.py --test --inference greedy --load_model ./checkpoints_n5_v1
+python main.py --num_nodes 20 --num_vehicles 1 --cuda --capacity 50 --embedding_dim 128 --epochs 1000 --batch_size 64 --lr 1e-4 --baseline_lr 1e-3 --entropy_weight 0.05 --max_steps 60 --fixed_customers --save_dir checkpoints/vrp_n20_v3_train --log_interval 1 --save_interval 10 --test_size 50
+
+#testing for inference random
+python main.py --test_only --load_model checkpoints/vrp_n20_v3_train/model_final --num_nodes 20 --num_vehicles 1 --capacity 50 --embedding_dim 128 --fixed_customers --num_samples 100 --inference random --test_size 50 --save_dir results/vrp_n20_v3_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_n5_v1/model_final --num_nodes 5 --num_vehicles 1 --capacity 50 --embedding_dim 128 --fixed_customers --num_samples 100 --inference random --test_size 50 --save_dir results/vrp_n5_v1_random_eval 
+python main.py --test_only --load_model ./checkpoints_n20_v1/model_final --num_nodes 20 --num_vehicles 1 --capacity 50 --embedding_dim 128 --fixed_customers --num_samples 100 --inference random --test_size 50 --save_dir results/vrp_n5_v1_random_eval
+python main.py --test_only --load_model ./checkpoints_strong_10/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --fixed_customers --num_samples 100 --inference random --test_size 50 --save_dir results/vrp_n5_v1_random_eval
+python main.py --test_only --load_model ./checkpoints_pro_10/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --fixed_customers --num_samples 100 --inference random --test_size 50 --save_dir results/vrp_n10_v1_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 100 --inference random --test_size 50 --save_dir results/vrp_n5_v1_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v2/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 16 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_n10_v2_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v3/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_n10_v3_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v4/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 512 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_n10_v4_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_n10_v5_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v6/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_n10_v6_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v7/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_n10_v7_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v7/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 3000 --inference random --test_size 50 --save_dir results/vrp_n10_v7_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_20/model_final --num_nodes 20 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_n20_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_20_V2/model_final --num_nodes 20 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_n20_V2_random_eval --cuda
+
+#testing for inference beam search
+python main.py --test_only --load_model ./checkpoints_final_10/model_epoch_4880 --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 3 --gat_heads 4 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_n10_final_random_eval --cuda
+
+python main.py --test_only --load_model checkpoints/vrp_n20_v3_train/model_final --num_nodes 20 --num_vehicles 1 --capacity 50 --embedding_dim 128 --fixed_customers --inference beam --beam_width 3 --test_size 50 --save_dir results/vrp_n20_v3_beam_eval --cuda
+python main.py --test_only --load_model ./checkpoints_n5_v1/model_final --num_nodes 5 --num_vehicles 1 --capacity 50 --embedding_dim 128 --fixed_customers --inference beam --beam_width 3 --test_size 50 --save_dir results/vrp_n5_v1_beam_eval 
+python main.py --test_only --load_model ./checkpoints_n20_v1/model_final --num_nodes 20 --num_vehicles 1 --capacity 50 --embedding_dim 128 --fixed_customers --inference beam --beam_width 3 --test_size 50 --save_dir results/vrp_n5_v1_beam_eval 
+python main.py --test_only --load_model ./checkpoints_strong_10/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --fixed_customers --inference beam --beam_width 3 --test_size 50 --save_dir results/vrp_n5_v1_beam_eval
+python main.py --test_only --load_model ./checkpoints_pro_10/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --fixed_customers --inference beam --beam_width 3 --test_size 50 --save_dir results/vrp_n5_v1_beam_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 5 --test_size 100 --save_dir results/ultra_beam --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v2/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 16 --inference beam --beam_width 5 --test_size 100 --save_dir results/ultra_beam_v2 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v3/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 5 --test_size 100 --save_dir results/ultra_beam_v3 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v4/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 512 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 5 --test_size 100 --save_dir results/ultra_beam_v4 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 5 --test_size 100 --save_dir results/ultra_beam_v5 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v6/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 5 --test_size 100 --save_dir results/ultra_beam_v6 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v7/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 5 --test_size 100 --save_dir results/ultra_beam_v7 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_20/model_final --num_nodes 20 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 10 --test_size 100 --save_dir results/ultra_beam_20 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_20/model_final --num_nodes 20 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 20 --test_size 100 --save_dir results/ultra_beam_20_full --cuda
+
+# testing for inference greedy
+python main.py --test_only --load_model checkpoints/vrp_n20_v3_train/model_final --num_nodes 20 --num_vehicles 1 --capacity 50 --embedding_dim 128 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_n20_v3_greedy_eval --cuda
+python main.py --test_only --load_model ./checkpoints_n5_v1/model_final --num_nodes 5 --num_vehicles 1 --capacity 50 --embedding_dim 128 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_n5_v1_greedy_eval 
+python main.py --test_only --load_model ./checkpoints_n20_v1/model_final --num_nodes 20 --num_vehicles 1 --capacity 50 --embedding_dim 128 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_n5_v1_greedy_eval 
+python main.py --test_only --load_model ./checkpoints_strong_10/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_n5_v1_greedy_eval 
+python main.py --test_only --load_model ./checkpoints_pro_10/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_n5_v1_greedy_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_n10_v1_greedy_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v2/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 16 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_n10_v2_greedy_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v3/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_n10_v3_greedy_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v4/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 512 --gat_layers 4 --gat_heads 8 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_n10_v4_greedy_eval --cuda
+
+python main.py --num_nodes 20 --num_vehicles 1 --cuda --capacity 50 
+--embedding_dim 128 --epochs 1000 --batch_size 64 --lr 1e-4 --baseline_lr 1e-3 
+--entropy_weight 0.05 --max_steps 60 --fixed_customers --save_dir checkpoints/vrp_n20_v3_train 
+--log_interval 1 --save_interval 10 --test_size 50
+
+model
+n=5
+python main.py --num_nodes 5 --epochs 1000 --batch_size 512 --lr 1e-4 --baseline_lr 2e-4 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --entropy_weight 0.01 --save_dir ./checkpoints_ultra_5 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_5/model_final --num_nodes 5 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_n5_greedy_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_5/model_final --num_nodes 5 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 3 --test_size 100 --save_dir results/ultra_beam_n5_3 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_5/model_final --num_nodes 5 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 100 --inference random --test_size 50 --save_dir results/vrp_n5_random_eval_100 --cuda
+
+N=10
+python main.py --test_only --load_model ./checkpoints_ultra_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 1000 --inference random --test_size 50 --save_dir results/vrp_n10_v5_random_eval --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 5 --test_size 100 --save_dir results/ultra_beam_v5_5 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --inference greedy --test_size 50 --save_dir results/vrp_n10_v5_greedy_eval --cuda
+
+test
+python main.py --test_only --load_model ./checkpoints_ultra_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --inference beam --beam_width 3 --test_size 100 --save_dir results/ultra_beam_v5_3 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 1 --inference random --test_size 50 --save_dir results/vrp_n10_v5_random_eval_1 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 10 --inference random --test_size 50 --save_dir results/vrp_n10_v5_random_eval_10 --cuda
+python main.py --test_only --load_model ./checkpoints_ultra_10_v5/model_final --num_nodes 10 --num_vehicles 1 --capacity 50 --embedding_dim 256 --gat_layers 4 --gat_heads 8 --fixed_customers --num_samples 100 --inference random --test_size 50 --save_dir results/vrp_n10_v5_random_eval_100 --cuda
+
+python exact_solver.py

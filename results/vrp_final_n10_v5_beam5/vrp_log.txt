@@ -1,0 +1,31 @@
+2026-01-08 15:31:17,769 [INFO] Running with arguments: Namespace(num_nodes=10, num_vehicles=1, capacity=50.0, fixed_customers=True, embedding_dim=256, gat_heads=8, gat_layers=4, epochs=100, batch_size=32, lr=0.0001, baseline_lr=0.001, entropy_weight=0.01, max_steps=30, inference='beam', num_samples=16, beam_width=5, test_size=100, cuda=True, seed=42, save_dir='results/vrp_final_n10_v5_beam5', load_model='./checkpoints_final_10_v5/model_final', test_only=True, log_interval=10, save_interval=20, deterministic_env=False)
+2026-01-08 15:31:17,769 [INFO] Using device: cuda
+2026-01-08 15:31:19,677 [INFO] Loaded SHARED validation dataset from ./data\validation_dataset_n10.pkl
+2026-01-08 15:31:19,688 [INFO] Loaded model weights from ./checkpoints_final_10_v5/model_final
+2026-01-08 15:31:19,688 [INFO] Running final evaluation (beam)...
+2026-01-08 15:31:19,688 [INFO] Starting Final evaluation with beam strategy.
+2026-01-08 15:31:34,369 [INFO] Running with arguments: Namespace(num_nodes=10, num_vehicles=1, capacity=50.0, fixed_customers=True, embedding_dim=256, gat_heads=8, gat_layers=4, epochs=100, batch_size=32, lr=0.0001, baseline_lr=0.001, entropy_weight=0.01, max_steps=30, inference='beam', num_samples=16, beam_width=5, test_size=100, cuda=True, seed=42, save_dir='results/vrp_final_n10_v5_beam5', load_model='./checkpoints_final_10_v5/model_final', test_only=True, log_interval=10, save_interval=20, deterministic_env=False)
+2026-01-08 15:31:34,369 [INFO] Using device: cuda
+2026-01-08 15:31:36,110 [INFO] Loaded SHARED validation dataset from ./data\validation_dataset_n10.pkl
+2026-01-08 15:31:36,118 [INFO] Loaded model weights from ./checkpoints_final_10_v5/model_final
+2026-01-08 15:31:36,118 [INFO] Running final evaluation (beam)...
+2026-01-08 15:31:36,118 [INFO] Starting Final evaluation with beam strategy.
+2026-01-08 15:41:08,206 [INFO] Running with arguments: Namespace(num_nodes=10, num_vehicles=1, capacity=50.0, fixed_customers=True, embedding_dim=256, gat_heads=8, gat_layers=4, epochs=100, batch_size=32, lr=0.0001, baseline_lr=0.001, entropy_weight=0.01, max_steps=30, inference='beam', num_samples=16, beam_width=5, test_size=100, cuda=True, seed=42, save_dir='results/vrp_final_n10_v5_beam5', load_model='./checkpoints_final_10_v5/model_final', test_only=True, log_interval=10, save_interval=20, deterministic_env=False)
+2026-01-08 15:41:08,207 [INFO] Using device: cuda
+2026-01-08 15:41:10,449 [INFO] Loaded SHARED validation dataset from ./data\validation_dataset_n10.pkl
+2026-01-08 15:41:10,466 [INFO] Loaded model weights from ./checkpoints_final_10_v5/model_final
+2026-01-08 15:41:10,466 [INFO] Running final evaluation (beam)...
+2026-01-08 15:41:10,466 [INFO] Starting Final evaluation with beam strategy.
+2026-01-08 15:41:11,975 [INFO] Instance 0: Cost = -488.360
+2026-01-08 15:41:11,976 [INFO]   Vehicle 1 Raw Route: [8, 5, 1, 3, 0, 9, 4, 7, 0, 6, 2, 0]
+2026-01-08 15:41:11,977 [INFO]   Instance 0: COMPLETE.
+2026-01-08 15:41:12,650 [INFO] Instance 1: Cost = -489.154
+2026-01-08 15:41:12,650 [INFO]   Vehicle 1 Raw Route: [8, 6, 2, 1, 3, 0, 5, 4, 7, 9, 0]
+2026-01-08 15:41:12,651 [INFO]   Instance 1: COMPLETE.
+2026-01-08 15:41:13,324 [INFO] Instance 2: Cost = -492.009
+2026-01-08 15:41:13,324 [INFO]   Vehicle 1 Raw Route: [8, 9, 4, 7, 5, 0, 1, 2, 3, 0, 6, 0]
+2026-01-08 15:41:13,324 [INFO]   Instance 2: COMPLETE.
+2026-01-08 15:42:14,352 [INFO] Final evaluation completed.
+2026-01-08 15:42:14,352 [INFO]   Mean Cost: -487.515
+2026-01-08 15:42:14,352 [INFO]   Total Time: 63.89s
+2026-01-08 15:42:14,352 [INFO]   Avg Time/Instance: 0.6389s

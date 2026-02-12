@@ -1,0 +1,57 @@
+2026-01-08 14:49:36,451 [INFO] Running with arguments: Namespace(num_nodes=10, num_vehicles=1, capacity=50.0, fixed_customers=True, embedding_dim=256, gat_heads=8, gat_layers=4, epochs=100, batch_size=32, lr=0.0001, baseline_lr=0.001, entropy_weight=0.01, max_steps=30, inference='random', num_samples=1000, beam_width=3, test_size=50, cuda=True, seed=42, save_dir='results/vrp_final_n10_v5_random_eval', load_model='./checkpoints_final_10_v5/model_final', test_only=True, log_interval=10, save_interval=20, deterministic_env=False)
+2026-01-08 14:49:36,451 [INFO] Using device: cuda
+2026-01-08 14:49:41,990 [INFO] Loaded SHARED validation dataset from ./data\validation_dataset_n10.pkl
+2026-01-08 14:49:42,008 [INFO] Loaded model weights from ./checkpoints_final_10_v5/model_final
+2026-01-08 14:49:42,008 [INFO] Running final evaluation (random)...
+2026-01-08 14:49:42,008 [INFO] Starting Final evaluation with random strategy.
+2026-01-08 14:50:30,980 [INFO] Instance 0: Cost = -490.756
+2026-01-08 14:50:30,980 [INFO]   Vehicle 1 Raw Route: [8, 2, 5, 0, 9, 7, 1, 0, 6, 3, 4, 0]
+2026-01-08 14:50:30,980 [INFO]   Instance 0: COMPLETE.
+2026-01-08 14:51:13,705 [INFO] Instance 1: Cost = -491.290
+2026-01-08 14:51:13,705 [INFO]   Vehicle 1 Raw Route: [2, 6, 8, 5, 9, 0, 1, 7, 3, 4, 0]
+2026-01-08 14:51:13,705 [INFO]   Instance 1: COMPLETE.
+2026-01-08 14:51:57,214 [INFO] Instance 2: Cost = -492.820
+2026-01-08 14:51:57,215 [INFO]   Vehicle 1 Raw Route: [8, 5, 2, 9, 1, 0, 3, 7, 4, 6, 0]
+2026-01-08 14:51:57,215 [INFO]   Instance 2: COMPLETE.
+2026-01-08 15:26:08,576 [INFO] Final evaluation completed.
+2026-01-08 15:26:08,576 [INFO]   Mean Cost: -491.657
+2026-01-08 15:26:08,576 [INFO]   Total Time: 2186.57s
+2026-01-08 15:26:08,576 [INFO]   Avg Time/Instance: 43.7313s
+2026-01-10 11:05:35,675 [INFO] Running with arguments: Namespace(num_nodes=10, num_vehicles=1, capacity=50.0, fixed_customers=True, embedding_dim=256, gat_heads=8, gat_layers=4, epochs=100, batch_size=32, lr=0.0001, baseline_lr=0.001, entropy_weight=0.01, max_steps=30, inference='random', num_samples=1000, beam_width=3, test_size=50, cuda=True, seed=42, save_dir='results/vrp_final_n10_v5_random_eval', load_model='./checkpoints_final_10_v5/model_final', test_only=True, log_interval=10, save_interval=20, deterministic_env=False)
+2026-01-10 11:05:35,675 [INFO] Using device: cuda
+2026-01-10 11:05:41,258 [INFO] Loaded SHARED validation dataset from ./data\validation_dataset_n10.pkl
+2026-01-10 11:05:41,275 [INFO] Loaded model weights from ./checkpoints_final_10_v5/model_final
+2026-01-10 11:05:41,275 [INFO] Running final evaluation (random)...
+2026-01-10 11:05:41,275 [INFO] Starting Final evaluation with random strategy.
+2026-01-10 11:06:25,913 [INFO] Instance 0: Cost = -490.756
+2026-01-10 11:06:25,913 [INFO]   Vehicle 1 Raw Route: [8, 2, 5, 0, 9, 7, 1, 0, 6, 3, 4, 0]
+2026-01-10 11:06:25,914 [INFO]   Instance 0: COMPLETE.
+2026-01-10 11:07:08,610 [INFO] Instance 1: Cost = -491.290
+2026-01-10 11:07:08,611 [INFO]   Vehicle 1 Raw Route: [2, 6, 8, 5, 9, 0, 1, 7, 3, 4, 0]
+2026-01-10 11:07:08,611 [INFO]   Instance 1: COMPLETE.
+2026-01-10 11:07:52,905 [INFO] Instance 2: Cost = -492.820
+2026-01-10 11:07:52,906 [INFO]   Vehicle 1 Raw Route: [8, 5, 2, 9, 1, 0, 3, 7, 4, 6, 0]
+2026-01-10 11:07:52,906 [INFO]   Instance 2: COMPLETE.
+2026-01-10 11:41:21,142 [INFO] Final evaluation completed.
+2026-01-10 11:41:21,142 [INFO]   Mean Cost: -491.657
+2026-01-10 11:41:21,142 [INFO]   Total Time: 2139.87s
+2026-01-10 11:41:21,142 [INFO]   Avg Time/Instance: 42.7973s
+2026-01-12 21:41:50,933 [INFO] Running with arguments: Namespace(num_nodes=10, num_vehicles=1, capacity=50.0, fixed_customers=True, embedding_dim=256, gat_heads=8, gat_layers=4, epochs=100, batch_size=32, lr=0.0001, baseline_lr=0.001, entropy_weight=0.01, max_steps=30, inference='random', num_samples=1000, beam_width=3, test_size=50, cuda=True, seed=42, save_dir='results/vrp_final_n10_v5_random_eval', load_model='./checkpoints_final_10_v5/model_final', test_only=True, log_interval=10, save_interval=20, deterministic_env=False)
+2026-01-12 21:41:50,934 [INFO] Using device: cuda
+2026-01-12 21:41:56,573 [INFO] Loaded SHARED validation dataset from ./data\validation_dataset_n10.pkl
+2026-01-12 21:41:56,596 [INFO] Loaded model weights from ./checkpoints_final_10_v5/model_final
+2026-01-12 21:41:56,596 [INFO] Running final evaluation (random)...
+2026-01-12 21:41:56,597 [INFO] Starting Final evaluation with random strategy.
+2026-01-12 21:43:13,136 [INFO] Instance 0: Cost = -490.756
+2026-01-12 21:43:13,136 [INFO]   Vehicle 1 Raw Route: [8, 2, 5, 0, 9, 7, 1, 0, 6, 3, 4, 0]
+2026-01-12 21:43:13,137 [INFO]   Instance 0: COMPLETE.
+2026-01-12 21:44:24,933 [INFO] Instance 1: Cost = -491.290
+2026-01-12 21:44:24,933 [INFO]   Vehicle 1 Raw Route: [2, 6, 8, 5, 9, 0, 1, 7, 3, 4, 0]
+2026-01-12 21:44:24,934 [INFO]   Instance 1: COMPLETE.
+2026-01-12 21:45:40,185 [INFO] Instance 2: Cost = -492.820
+2026-01-12 21:45:40,185 [INFO]   Vehicle 1 Raw Route: [8, 5, 2, 9, 1, 0, 3, 7, 4, 6, 0]
+2026-01-12 21:45:40,185 [INFO]   Instance 2: COMPLETE.
+2026-01-12 22:43:03,779 [INFO] Final evaluation completed.
+2026-01-12 22:43:03,782 [INFO]   Mean Cost: -491.657
+2026-01-12 22:43:03,782 [INFO]   Total Time: 3667.18s
+2026-01-12 22:43:03,782 [INFO]   Avg Time/Instance: 73.3436s

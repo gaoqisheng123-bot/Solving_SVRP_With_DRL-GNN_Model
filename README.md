@@ -1,4 +1,4 @@
-# Stochastic Vehicle Routing Problem (SVRP) with Deep Reinforcement Learning
+# Solving Stochastic Vehicle Routing Problem (SVRP) using A Deep Reinforcement Learning and Graph Neural Network Model (DRL-GNN)
 
 This project implements a Deep Reinforcement Learning (DRL) solution for the Stochastic Vehicle Routing Problem using PyTorch. It utilizes a **Graph Attention Network (GAT)** encoder and a **REINFORCE**-based policy gradient method to train an agent to route vehicles under uncertain demand and weather conditions.
 
@@ -55,10 +55,10 @@ python main.py --num_nodes 10 --epochs 200 --batch_size 16 --cuda
 ```
 
 Key Training Flags:
---save_dir: Directory to save checkpoints.
---lr: Learning rate for the policy network.
---entropy_weight: Coefficient for entropy regularization (encourages exploration).
---deterministic_env: If set, turns off weather noise (Real Demand = Base Demand).
+- --save_dir: Directory to save checkpoints.
+- --lr: Learning rate for the policy network.
+- --entropy_weight: Coefficient for entropy regularization (encourages exploration).
+- --deterministic_env: If set, turns off weather noise (Real Demand = Base Demand).
 
 Existing model parameter:
 ```bash

@@ -19,7 +19,10 @@ To ensure the Python imports work correctly, your directory structure **must** l
 │   └── reinforce.py
 ├── inference/
 │   └── strategies.py
-├── utils/  <-- (Ensure you have logger_utils.py, visualization_utils.py, data_utils.py here)
+├── utils/ 
+│   ├── logger_utils.py
+│   ├── visualization_utils.py
+│   └── data_utils.py
 └── checkpoints/
 ```
 

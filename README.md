@@ -21,7 +21,7 @@ To ensure the Python imports work correctly, your directory structure **must** l
 │   └── strategies.py
 ├── utils/  <-- (Ensure you have logger_utils.py, visualization_utils.py, data_utils.py here)
 └── checkpoints/
-.
+```
 
 ## 📦 2. Installation
 

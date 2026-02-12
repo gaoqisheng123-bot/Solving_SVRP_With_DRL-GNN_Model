@@ -36,7 +36,7 @@ pip install torch numpy matplotlib tqdm
 
 ## 🏋️ 3. Training the Model
 
-**Basic Training**\\
+**Basic Training**//
 Train a model for a 10-node problem for 100 epochs:
 
 ```bash

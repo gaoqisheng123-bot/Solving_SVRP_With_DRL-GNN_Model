@@ -2,6 +2,26 @@
 
 This project implements a Deep Reinforcement Learning (DRL) solution for the Stochastic Vehicle Routing Problem using PyTorch. It utilizes a **Graph Attention Network (GAT)** encoder and a **REINFORCE**-based policy gradient method to train an agent to route vehicles under uncertain demand and weather conditions.
 
+## 🌩️ Understanding the Stochastic Environment
+
+Unlike standard VRPs where customer demand is known perfectly in advance, this project simulates a **Stochastic Vehicle Routing Problem (SVRP)**.
+
+### How Demand Works
+1.  **Base Demand:** Every customer has a average demand (observable by the agent).
+2.  **Weather Vector:** A global weather context (e.g., Temperature, Humidity, Wind Speed) is generated for each episode.
+3.  **Real Demand (Hidden):** The actual demand is calculated dynamically based on:
+    *   **Base Demand**
+    *   **Weather Impact:** Nodes have spatially correlated sensitivities (e.g., Northern nodes might react differently to "Heat" than Southern nodes).
+    *   **Random Noise:** Unpredictable fluctuations.
+
+$$ Demand_{real} = Demand_{base} + f(Weather, Location) + \epsilon $$
+
+### The Challenge for the Agent
+The DRL agent **does not know the Real Demand** until it arrives at the customer node. It only sees the **Base Demand** and the **Current Weather**.
+
+*   **Risk Management:** The agent must learn to infer which customers might have higher-than-expected demand based on the weather forecast.
+*   **Capacity Planning:** If a vehicle arrives at a customer but has insufficient load to satisfy the *Real Demand*, a **failure penalty** is applied, and the customer remains partially unserved. The agent must learn to leave "buffer capacity" or plan shorter routes during extreme weather.
+
 ## 📂 1. Project Structure
 
 To ensure the Python imports work correctly, your directory structure **must** look like this.
